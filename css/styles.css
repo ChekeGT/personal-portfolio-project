@@ -49,3 +49,27 @@ footer p{
 a{
     color: var(--main-white)
 }
+
+/* Header */
+header{
+    background-color: var(--main-red);
+    position: fixed;
+    width: 100%;
+}
+#navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+}
+
+#navbar a {
+    display: block;
+    font-size: 1.25rem;
+    height: 100%;
+    padding: 0.75rem;
+}
+#navbar a:hover, #navbar a:focus{
+    background-color: var(--main-blue);
+}
