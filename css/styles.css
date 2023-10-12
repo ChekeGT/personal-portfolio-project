@@ -1,0 +1,51 @@
+/* This css will be done in a mobile-first fashion.
+The media queries will be for desktop */
+
+/* General selectors */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+a, a:link, a:focus, a:hover {
+    text-decoration: none;
+}
+
+/* Tipography */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.title, .subtitle, .project-section-title{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.project-title, .subtitle-contact, .title, .subtitle, .project-section-title{
+    color: var(--main-white);
+    text-align: center;
+}
+.subtitle{
+    color: var(--main-red);
+    text-align:center;
+}
+
+.project-section-title{
+    border-bottom: 3px solid var(--main-white);
+    padding-bottom: 0.5em;
+    text-transform: capitalize;
+}
+footer p{
+    color: var(--main-white);
+}
+
+a{
+    color: var(--main-white)
+}
