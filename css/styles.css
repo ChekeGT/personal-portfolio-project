@@ -49,7 +49,12 @@ footer p{
 a{
     color: var(--main-white)
 }
-
+.title{
+    font-size: 3rem;
+}
+.subtitle, .subtitle-contact{
+    font-size: 1.5rem;
+}
 /* Header */
 header{
     background-color: var(--main-red);
@@ -59,9 +64,7 @@ header{
 #navbar ul{
     display: flex;
     list-style: none;
-    gap: 1em;
-    justify-content: flex-end;
-    margin-right: 1.5rem;
+    justify-content: center;
 }
 
 #navbar a {
@@ -72,4 +75,15 @@ header{
 }
 #navbar a:hover, #navbar a:focus{
     background-color: var(--main-blue);
+}
+
+/* About section */
+#welcome-section{
+    height: 100vh;
+    background-color: var(--main-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
 }
