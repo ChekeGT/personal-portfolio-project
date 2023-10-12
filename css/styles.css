@@ -147,3 +147,12 @@ header{
 .fab, .fa{
     font-size: 1.25rem;
 }
+
+/* Footer */
+footer{
+    background-color: var(--main-gray);
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 5px solid var(--main-red);
+    padding: 2rem;
+}
