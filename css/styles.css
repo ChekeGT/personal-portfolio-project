@@ -11,6 +11,9 @@ The media queries will be for desktop */
     --main-blue: #45567d;
     --main-gray: #303841;
 }
+html{
+    scroll-behavior: smooth;
+}
 img{
     width: 100%;
     display: block;
@@ -20,6 +23,18 @@ a, a:link, a:focus, a:hover {
     text-decoration: none;
 }
 
+/* Animations */
+@keyframes appear{
+    0%{
+        opacity: 0
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 /* Tipography */
 body{
     font-family: 'Poppins', sans-serif;
@@ -76,6 +91,13 @@ header{
 #navbar a:hover, #navbar a:focus{
     background-color: var(--main-blue);
 }
+/* Media queries for nav */
+@media (min-width: 450px){
+
+    #navbar ul{
+        justify-content: flex-end;
+    }
+}
 
 /* About section */
 #welcome-section{
@@ -90,13 +112,16 @@ header{
 
 /* Projects section */
 #projects{
-    padding-top: 2rem;
+    padding-top: 4rem;
     background-color: var(--main-blue);
     display: flex;
     flex-direction: column;
 }
 .project-section-title{
     margin-bottom: 3rem;
+}
+.project-tile:last-of-type{
+    margin-bottom: 2rem;
 }
 
 #projects-container{
@@ -108,9 +133,6 @@ header{
 }
 .project-title{
     background-color: var(--main-gray);
-}
-.project-container img{
-    height: calc(100% - 6.8rem)
 }
 .project-title{
     padding: 0.5rem;
@@ -125,15 +147,53 @@ header{
     align-self: center;
     margin-bottom: 2rem;
 }
-.btn::after{
+
+.project-container h3{
+    text-transform: capitalize;
+}
+
+/* Animation for links */
+.code{
+    margin-right: 1rem;
+    transition: color 0.3s ease-out;
+    color: var(--main-gray)
+}
+.project-container:hover .code{
+    color: #ff7f50;
+}
+
+/* Btn animation */
+.btn{
+    transition: background 0.3s ease-out;
+}
+.btn:hover{
+    background-color: var(--main-red);
+}
+.btn i{
     margin-left: 1rem;
-    content: ">";
+}
+.btn i, .btn p{
+    transition: transform 0.3s ease-out;
+}
+.btn:hover i{
+    transform: translateX(10px);   
+}
+
+/* Media queries for project section */
+@media (min-width: 770px){
+    .project-container img{
+        height: 300px
+    }
+    .project-container{
+        height: 300px;
+    }
 }
 
 /* Contact section */
 #contact{
     height: 100vh;
     display: flex;
+    padding: 0 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -142,10 +202,18 @@ header{
 }
 .social-media-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem
 }
 .fab, .fa{
     font-size: 1.25rem;
+}
+
+/* Contact section animation */
+.fab:hover, .fa:hover{
+    transition: transform 0.3s ease-out;
+    transform: translateY(8px);
 }
 
 /* Footer */
