@@ -129,3 +129,21 @@ header{
     margin-left: 1rem;
     content: ">";
 }
+
+/* Contact section */
+#contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-gray);
+    gap: 2rem;
+}
+.social-media-container{
+    display: flex;
+    gap: 1rem
+}
+.fab, .fa{
+    font-size: 1.25rem;
+}
